@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 334 62% 100%;
+    --foreground: 334 55% 1%;
+    --muted: 334 35% 95%;
+    --muted-foreground: 334 9% 37%;
+    --popover: 334 62% 100%;
+    --popover-foreground: 334 55% 1%;
+    --card: 334 62% 100%;
+    --card-foreground: 334 55% 1%;
+    --border: 334 5% 95%;
+    --input: 334 5% 95%;
+    --primary: 334 44% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 334 11% 90%;
+    --secondary-foreground: 334 11% 30%;
+    --accent: 334 20% 82%;
+    --accent-foreground: 334 20% 22%;
+    --destructive: 18 93% 23%;
+    --destructive-foreground: 18 93% 83%;
+    --ring: 334 44% 52%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 278 58% 1%;
+    --foreground: 278 23% 97%;
+    --card: 278 58% 2%;
+    --card-foreground: 278 23% 98%;
+    --popover: 278 58% 2%;
+    --popover-foreground: 278 23% 98%;
+    --primary: 278 6% 72%;
+    --primary-foreground: 278 6% 12%;
+    --secondary: 248 6% 72%;
+    --secondary-foreground: 248 6% 12%;
+    --accent: 308 6% 72%;
+    --accent-foreground: 308 6% 12%;
+    --destructive: 3 98% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 248 13% 10%;
+    --muted-foreground: 248 7% 70%;
+    --border: 278 4% 12%;
+    --input: 278 4% 12%;
+    --ring: 278 6% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-space;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scroll-area-viewport-h-full > div {
+    @apply h-full;
+  }
+
+  /* Remove default scroll bar for Apple devices */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Remove default input number up and down toggles */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+}

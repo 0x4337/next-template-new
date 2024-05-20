@@ -52,9 +52,9 @@ export default function RootLayout({
           <Toaster />
 
           <Providers>
-            <div className="relative flex min-h-screen flex-col">
+            <div className="relative flex flex-col">
               {/* HEADER */}
-              <div className="flex-1">{children}</div>
+              {children}
               {/* FOOTER */}
             </div>
           </Providers>
